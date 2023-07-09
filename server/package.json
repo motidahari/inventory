@@ -1,0 +1,46 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "User system for inventory management of warehouses, management of employees in offices and their equipment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod2": "pm2 start \"npm run start\"",
+    "prod": "pm2 start \"npm run start;\"",
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run server\" \"npm run ../client\"",
+    "kill": "concurrently \"npx kill-port 3000 --y\" \"npx kill-port 5002 --y\"",
+    "kill-prod": "concurrently \"pm2 stop all\" \"pm2 delete all\"",
+    "save": "concurrently \"pm2 startup;\" \"pm2 save\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motidahari/inventory.git"
+  },
+  "author": "Moti Dahari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motidahari/inventory/issues"
+  },
+  "homepage": "https://github.com/motidahari/inventory#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.8.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql2": "^2.3.3",
+    "mysql2-promise": "^0.1.4",
+    "sequelize": "^6.15.1",
+    "uuid": "^8.3.2"
+  }
+}

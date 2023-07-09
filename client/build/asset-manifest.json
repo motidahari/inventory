@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.43c86f1c.css",
+    "main.js": "/static/js/main.c57df8b0.js",
+    "static/media/GLOBAL.jpg": "/static/media/GLOBAL.3bc3087d69084be3a705.jpg",
+    "static/media/Singapore.jpg": "/static/media/Singapore.61c64dab2061d1339a1a.jpg",
+    "static/media/GER.jpg": "/static/media/GER.7822466684c891722851.jpg",
+    "static/media/Australia.jpg": "/static/media/Australia.d83d81a40072cdfb658c.jpg",
+    "static/media/JP.jpg": "/static/media/JP.11dff9a9b35d762785d6.jpg",
+    "static/media/IL.jpg": "/static/media/IL.4314d9cd5ab4e7cf46c3.jpg",
+    "static/media/USA.jpg": "/static/media/USA.4b79c7cea12d51b3997e.jpg",
+    "static/media/Brazil.jpg": "/static/media/Brazil.df5689ad06eff0d6133d.jpg",
+    "static/media/Italy.jpg": "/static/media/Italy.517a84581dc1ba9cefb0.jpg",
+    "static/media/UK.jpg": "/static/media/UK.4a73fd4e64d2827dce11.jpg",
+    "index.html": "/index.html",
+    "main.43c86f1c.css.map": "/static/css/main.43c86f1c.css.map",
+    "main.c57df8b0.js.map": "/static/js/main.c57df8b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43c86f1c.css",
+    "static/js/main.c57df8b0.js"
+  ]
+}

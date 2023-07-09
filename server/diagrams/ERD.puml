@@ -1,0 +1,114 @@
+
+@startuml
+class Users {
+    id (PK)
+    userId (PK)
+    email
+    name
+    password
+    createdAt
+}
+
+class Products {
+    id (PK)
+    productId (PK)
+    locationId(FK)
+    serialNumber
+    productName
+    PONumber
+    warranty
+    date
+}
+
+class Locations {
+    id (PK)
+    locationId (PK)
+    locationName
+}
+
+class OfficeEquipmentForEmployees {
+    id (PK)
+    equipmentId(FK)
+    employeeId(FK)
+}
+
+
+class Offices {
+    id (PK)
+    officeId (PK)
+    officeName
+}
+
+class OfficeEquipment {
+    id (PK)
+    equipmentId (PK)
+    equipmentName
+}
+
+class Employees {
+    id (PK)
+    employeeId (PK)
+    officeId(FK)
+    employeeName
+}
+
+class LogsProducts {
+    Id (PK)
+    logId (PK)
+    productId(FK)
+    action
+    userCreateAction
+    descripction
+    storage
+    status
+    date
+}
+class LogsUsers {
+    Id (PK)
+    logId (PK)
+    userId(FK)
+    userCreateAction
+    action
+    date
+}
+
+
+
+
+
+' Products <|--|> AmplifierTraffic : ProductId == [\nACOM Amlifier ,\nBarrett Transceiver ,\nExodus Amlifier GEN1 ,\nTujicom Amlifier GEN1 ,\nTujicom Amlifier GEN1 ]
+Products <|--|> Locations : LocationId == Id
+
+
+Employees <|--|> Offices: OfficeId == Id
+Employees <|--|> OfficeEquipmentForEmployees : EmployeeId == Id
+OfficeEquipmentForEmployees <|--|> OfficeEquipment: EquipmentId == Id
+Products <|--|> LogsProducts: productId == productId
+Users <|--|> LogsUsers
+Users  <|--|> Employees
+Users  <|--|> Products
+' Users
+' Products
+' Locations
+' AmplifierTraffic
+' OfficeEquipmentForEmployees
+' Offices
+' OfficeEquipment
+' Logs
+' Employees
+
+
+
+
+
+' Logs <|--|>Users
+' Logs <|--|>Products
+' Logs <|--|>Locations
+' Logs <|--|>AmplifierTraffic
+' Logs <|--|>OfficeEquipmentForEmployees
+' Logs <|--|>Offices
+' Logs <|--|>OfficeEquipment
+' Logs <|--|>Employees
+
+
+@enduml
